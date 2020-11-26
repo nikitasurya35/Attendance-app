@@ -1,32 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.attendence">
+    package="com.example.androidattendancesystem"
+    android:versionCode="1"
+    android:versionName="1.0" >
 
     <application
+         android:name="com.android.attendance.context.ApplicationContext"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".student_attend_3_3"></activity>
-        <activity android:name=".student_subj_3_2" />
-        <activity android:name=".student_dashboard_3_1" />
-        <activity android:name=".teacher_addstudents_2_5" />
-        <activity android:name=".teacher_attendence_2_4" />
-        <activity android:name=".teacher_subj_2_3" />
-        <activity android:name=".teacher_sem_x_2_2" />
-        <activity android:name=".teacher_semesters_2_1" />
-        <activity android:name=".student_login_3_0" />
-        <activity android:name=".teacher_login_2_0" />
-        <activity android:name=".homepage" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.android.attendance.activity.MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.android.attendance.activity.formbuttons"
+            android:label="AndroidAttendanceSystem" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.MenuActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.android.attendance.activity.mentoractivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.AddFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.android.attendance.activity.AddStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.android.attendance.activity.ViewFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.android.attendance.activity.ViewStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.android.attendance.activity.TestActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.ViewStudentByBranchYear"
+            android:label="@string/app_name" >
+        </activity>
+          <activity
+            android:name="com.android.attendance.activity.AddAttandanceSessionActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.AddAttendanceActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.ViewAttendanceByFacultyActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.android.attendance.activity.ViewAttendancePerStudentActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+
+        
     </application>
 
 </manifest>
