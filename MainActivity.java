@@ -1,27 +1,55 @@
-package com.example.attendence;
+package com.android.attendance.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.androidattendancesystem.R;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-import java.util.Timer;
-import java.util.TimerTask;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity {
+	Button start;
+	Button forms;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Timer timer1 = new Timer();
-        timer1.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, homepage.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 5000);
-    }
+		start =(Button)findViewById(R.id.buttonstart);
+		start.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				Intent intent =new Intent(MainActivity.this,LoginActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		forms =(Button)findViewById(R.id.buttonforms);
+		forms.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				Intent intent =new Intent(MainActivity.this,formbuttons.class);
+				startActivity(intent);
+			}
+		});
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
 }
